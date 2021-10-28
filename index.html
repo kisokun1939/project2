@@ -30,9 +30,11 @@
         camera.position.set(0, 0, +1300);
 
         // 平行光源を作成
-        const directionalLight = new THREE.DirectionalLight(0xffffff);
+        const directionalLight = new THREE.DirectionalLight(0xffffff, 0.7);
         directionalLight.position.set(1, 1, 1);
         scene.add(directionalLight);
+        const light = new THREE.AmbientLight(0xFFFFFF, 0.5);
+        scene.add(light);
 
          // コンテナーを作成
          const container = new THREE.Object3D();
